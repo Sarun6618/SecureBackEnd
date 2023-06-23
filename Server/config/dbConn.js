@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const DATABASE_URI = 'mongodb://127.0.0.1:27017/AssetsData';
+const DATABASE_URI = 'mongodb://127.0.0.1:27017/SecureDatabase';
 const connectDB = async () => {
     try {
         await mongoose.connect(DATABASE_URI, {
