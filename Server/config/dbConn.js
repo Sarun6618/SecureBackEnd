@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
-const DATABASE_URI = 'mongodb://127.0.0.1:27017/SecureDatabase';
-const connectDB = async () => {
-    try {
-        await mongoose.connect(DATABASE_URI, {
-            useUnifiedTopology: true,
-            useNewUrlParser: true
-        });
-    } catch (err) {
-        console.error(err);
-    }
-}
+const mongoose = require("mongoose");
 
-module.exports = connectDB
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.DATABASE_URI, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+module.exports = connectDB;
